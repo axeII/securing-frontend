@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<title>Flaskr</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
+<script src="{{ url_for('static', filename='lib/js/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='lib/js/jquery-1.8.2.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='lib/js/jquery-jvectormap-2.0.3.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='lib/js/jquery-jvectormap-world-mill.js') }}"></script>
+  <script src="./static/lib/js/bootstrap.min.js"></script>
+  <script src="./static/lib/js/crossfilter.js"></script>
+  <script src="./static/lib/js/d3.js"></script>
+  <script src="./static/lib/js/dc.js"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<div class=page>
+	<div class=loginwrapper>
+	{% if not session.logged_in %}
+	<a href="#">
+		<div class="app-title">
+			<h1 style="color:#000;">Flaskr</h1>
+		</div>
+  </a>
+	{% else %}
+		<a href="{{ url_for('logout') }}">
+			<div class="app-title">
+				<h1 style="color:#000;">Flaskr</h1>
+			</div>
+		</a>
+	{% endif %}
+	</div>
+		{% for message in get_flashed_messages() %}
+		<div id="alert-box">
+			<div class=flash>{{ message }}</div>
+	</div>
+		{% endfor %}
+	{% block body %}{% endblock %}
+</div>

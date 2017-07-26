@@ -1,0 +1,139 @@
+/*
+ * Části kódy byly převzraty z Githubu
+ * uživatel: keen,
+ * repozitář: dashboards,
+ * adresa: https://github.com/keen/dashboards
+ * licence: MIT
+ * */
+
+
+/* Global variables */
+
+* {
+box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+}
+
+body {
+font-family: Arial;
+background-color: #f2f2f2;
+padding: 50px;
+}
+
+input {
+text-align: center;
+background-color: #ECF0F1;
+border: 2px solid transparent;
+border-radius: 3px;
+font-size: 16px;
+font-weight: 200;
+padding: 10px 0;
+width: 250px;
+transition: border .5s;
+}
+
+input:focus {
+border: 2px solid #3498DB;
+box-shadow: none;
+}
+
+/* ID variables */
+
+#num1,#num2 {
+    font-size: 60px;
+}
+
+#chart-ring-year{
+	margin-left: 10px;
+}
+
+#alert-box {
+    color:#555;
+    border-radius:10px;
+    font-family:Tahoma,Geneva,Arial,sans-serif;font-size:11px;
+    padding:10px 10px 10px 36px;
+    margin:10px;
+		background:#fff8c4;
+    border:1px solid #f2c779;
+}
+
+#alert-box span {
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+#world-map-gdp {
+	width: auto;
+	height: 400px;
+}
+
+/* Class variables */
+
+.dc-chart g.row text {
+    fill: black;
+    font-size: 12px;
+}
+
+.page a{
+	text-decoration:none;
+}
+
+.flash {
+	text-transform:uppercase;
+	font-size:11px;
+}
+
+.login {
+margin: 20px auto;
+width: 300px;
+}
+
+.login-screen {
+background-color: #FFF;
+padding: 20px;
+text-decoration: none;
+border: 1px solid rgba(210, 210, 210, 0.81);
+}
+ 
+.app-title {
+text-align: center;
+color: #777;
+}
+ 
+.login-form {
+text-align: center;
+}
+.control-group {
+margin-bottom: 10px;
+}
+
+.btn {
+  border: 2px solid transparent;
+  background: #333;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+}
+ 
+.btn:hover {
+	background-color: rgba(200, 44, 191, 0.74);
+}
+ 
+.login-link {
+  font-size: 12px;
+  color: #444;
+  display: block;
+	margin-top: 12px;
+}

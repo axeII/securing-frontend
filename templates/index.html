@@ -1,0 +1,118 @@
+<!-- Some parts of code are taken form github
+ user: keen,
+ repo: dashboards,
+ address: https://github.com/keen/dashboards
+ licence: MIT
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Správce exploitů</title>
+
+	<!-- css libraries custom css -->
+  <link rel="stylesheet" href="./static/lib/css/jquery-jvectormap-2.0.3.css" type="text/css" media="screen"/>
+  <link rel="stylesheet" href="./static/lib/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./static/lib/css/keen-dashboards.css">
+  <link rel="stylesheet" href="./static/lib/css/dc.css">
+  <link rel="stylesheet" href="./static/css/style.css">
+
+	<!-- js & data -->
+  <script src="{{ url_for('static', filename='lib/js/jquery-1.8.2.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='lib/js/jquery-jvectormap-2.0.3.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='lib/js/jquery-jvectormap-world-mill.js') }}"></script>
+  <script src="./static/lib/js/bootstrap.min.js"></script>
+  <script src="./static/lib/js/crossfilter.js"></script>
+  <script src="./static/lib/js/d3.js"></script>
+  <script src="./static/lib/js/dc.js"></script>
+
+</head>
+<body class="application">
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+			<a class="navbar-brand" href="{{ url_for('logout') }}">Odhlášení</a>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+			
+      <div class="col-sm-6">
+        <div class="row">
+
+          <div class="col-sm-12">
+            <div class="chart-wrapper">
+              <div class="chart-title">
+								Počet Eploitů
+              </div>
+              <div class="chart-stage">
+                <div id="date-attacks"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="chart-wrapper">
+              <div class="chart-title">
+               Typ útoku
+              </div>
+              <div class="chart-stage">
+                <div id="exploit-row-chart" class="dc-chart"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="chart-wrapper">
+              <div class="chart-title">
+                Typ metody
+              </div>
+              <div class="chart-stage">
+                <div id="commands" class="dc-chart"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+						Světový přehled původu útoku
+          </div>
+          <div class="chart-stage">
+						<div id="world-map-gdp"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+           Celkový počet útoků
+          </div>
+          <div class="chart-stage">
+            <div id="num1"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Celkový počet prozkoumaných požadavků
+          </div>
+          <div class="chart-stage">
+            <div id="num2"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+<hr>
+    <p class="small text-muted">Built with &#9829; by <a href="https://keen.io">Keen IO</a></p>
+  </div>
+  <script src="./static/js/main.js"></script>
+  </body>
+</html>

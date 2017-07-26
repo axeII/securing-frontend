@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block body %}
+{% for message in get_flashed_messages() %}
+	<div id="alert-box">
+		<div class=flash>{{ message }}</div>
+	</div>
+{% endfor %}
+
+<h1>Test.</h1>
+
+<div>
+  <p>When filtering items in a crossfilter data set with dc.js, items are filtered using an || filter. For example, if you click "Mr. A" and "Mr. B" on the row chart, all the items that have "Mr. A" || "Mr. B" with be selected. But in the case of items grouped
+    by tags, we want an && filtering. So we use the crossfilter dimension.filterFunction with dynamically created filter functions to create this effect.</p>
+</div>
+<div id="chart-ring-year"></div>
+<div id="exploit-row-chart"></div>
+<div id="date-chart"></div>
+<div id="num1"></div>
+<br>
+<div id="num2"></div>
+{% endblock %}

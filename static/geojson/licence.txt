@@ -1,0 +1,2 @@
+Data a některé čísti kodu,  byly převzaty z http://jvectormap.com/documentation/.
+Na data a kód se vztahuje GPL licence.
